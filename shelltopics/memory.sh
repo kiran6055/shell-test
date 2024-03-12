@@ -1,6 +1,6 @@
 #!/bin/bash
 Mem_Usage=$(free -m | awk '/Mem/{ print int($3)}')
-Memory_Threshold=1500
+Memory_Threshold=100
 message=""
 
 if [ "$Mem_Usage" -ge "$Memory_Threshold" ] ;
@@ -12,3 +12,6 @@ else
 fi
 
 echo "message is: $message"
+
+sh mail.sh "kirandevopskumar@gmail.com, kirankumar.nagaraja@gmail.com" "HIGH MEMORY_USAGE" "\n$message" "DEVOPS TEAM"
+

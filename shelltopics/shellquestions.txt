@@ -1,0 +1,20 @@
+
+How can you count the occurrences of a specific word in a file using a shell script?
+
+Write a shell script that reads a file line by line and prints only those lines that contain a specific keyword.
+
+Can you write a shell script that reads a file and extracts all unique words from it?
+
+How would you implement a shell script that finds the most frequently occurring word in a file?
+
+Write a shell script that reads a file and counts the number of lines, words, and characters in it.
+
+Implement a shell script that reads a file and prints the longest and shortest words present in it.
+
+How can you sort the words in a file in alphabetical order using a shell script?
+
+Write a shell script that reads a file and replaces all occurrences of a specific word with another word.
+
+These are just a few examples to give you an idea of the kind of questions you might encounter. Each question focuses on a different aspect of file handling and word manipulation in shell scripting.
+
+Remember, it's important to practice writing shell scripts to solve these types of problems to enhance your skills and be better prepared for interviews.

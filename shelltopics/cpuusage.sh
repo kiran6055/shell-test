@@ -14,3 +14,7 @@ message=""
 
 
 echo "message is: $message"
+
+
+sh mail.sh "kirandevopskumar@gmail.com, kirankumar.nagaraja@gmail.com" "CPU_USAGE" "\n$message" "DEVOPS TEAM"
+

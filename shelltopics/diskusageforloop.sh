@@ -13,11 +13,11 @@ IFS=$'\n'
 
 for line in $DISK_USAGE
 do
-	usage=$(echo $line | cut -d "%" -f1)
-	partition=$(echo $line | cut -d " " -f2)
-	echo "usage is: $usage"
-        echo "partition is: $partition"
-	if [ "$usage" -ge "$DISK_THRESHOLD" ] 
+	usage=$(echo $line | cut -d "%" -f1) 
+	partition=$(echo $line | cut -d " " -f2) 
+	echo "usage is: $usage" &>> file.log
+        echo "partition is: $partition" &>> file.log
+	if [ $usage -ge $DISK_THRESHOLD ] 
 	then
 		message+="High disk usage on $partition: $usage%\n"
 	fi
@@ -25,6 +25,9 @@ do
 
 done
 
-echo -e "message is : $message"
+echo -e "message is : \n$message"
 
-echo -e "$message" | mail -s "HIGH DISK USAGE" kirandevopskumar@gmail.com, kirankumar.nagaraja@gmail.com
+#echo -e "$message" | mail -s "high_disk_usage" kirandevopskumar@gmail.com, kirankumar.nagaraja@gmail.com 
+#here we are using andother shfile mail.sh to run here
+#
+sh mail.sh "kirandevopskumar@gmail.com, kirankumar.nagaraja@gmail.com" "HIGH DISK_USAGE" "\n$message" "DEVOPS TEAM"
